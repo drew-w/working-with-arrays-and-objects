@@ -50,7 +50,19 @@ var employees = [
     3. Return the updated employee array.
 */
 
-//Code Here
+const employeeUpdater = () => {
+  employees.forEach((elem, index, arr) => {
+    for(key in elem){
+      if(elem[key] === 'Theo'){
+        arr.splice(index, 1)
+      }
+      if(elem[key] === 'Lorie'){
+        elem.department = 'HR'
+      }
+    }
+  })
+  return employees
+}
 
 
 
@@ -68,7 +80,16 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
     3. Return the updated array.
 */
 
-//Code Here
+let removeDuplicates = () => {
+  for(i = 0; i < workplaceAccidents.length; i++){
+    for(j = i + 1; j <workplaceAccidents.length; j++){
+      if (workplaceAccidents[i] === workplaceAccidents[j]){
+        workplaceAccidents.splice(i, 1)
+      }
+    }
+  }
+  return workplaceAccidents
+}
 
 
 
@@ -96,8 +117,14 @@ var cat = {
     2. Assign fluffy2ndFriend the name of Fluffy's 2nd friend.
 */
 
-//Code Here
-var grumpyActivity;
+
+var grumpyActivity = cat.forEach((elem, index, arr) => {
+  for(key in elem.catFriends){
+    if(elem[key] === 'Grumpy'){
+      return elem.activities[1]
+    }
+  }
+})
 var fluffy2ndFriend;
 
 
@@ -157,6 +184,18 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
     4. Return the modified numsArr.
 */
 
-//Code Here
+function looper() {
+  numsArr.forEach((elem) => {
+    for(i = 0; i < elem.length; i++){
+      if(elem[i] % 2 === 0){
+        elem[i] = 'even'
+      }
+      else {
+        elem[i] = 'odd'
+      }
+    }
+  })
+  return numsArr
+}
 
 
