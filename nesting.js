@@ -118,14 +118,8 @@ var cat = {
 */
 
 
-var grumpyActivity = cat.forEach((elem, index, arr) => {
-  for(key in elem.catFriends){
-    if(elem[key] === 'Grumpy'){
-      return elem.activities[1]
-    }
-  }
-})
-var fluffy2ndFriend;
+var grumpyActivity = cat.catFriends[0].activities[1]
+var fluffy2ndFriend =cat.catFriends[1].name
 
 
 
@@ -165,7 +159,11 @@ var myCar = {
     3. Change atFaultForAccident from true to false.
 */
 
-//Code Here
+const recordCleaner = () => {
+  for(i = 0; i < myCar.accidents.length; i++){
+    myCar.accidents[i].atFaultForAccident = false
+  }
+}
 
 
 
